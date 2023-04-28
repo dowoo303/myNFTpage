@@ -7,9 +7,7 @@ import Nfts from "../components/Nfts";
 const web3 = new Web3(window.ethereum);
 const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
 
-const Main = ({ account }) => {
-  const [totalNft, setTotalNft] = useState(0);
-  const [mintedNft, setMintedNft] = useState(0);
+const Main = ({ account, mintedNft, setMintedNft, totalNft, setTotalNft }) => {
   const [myNft, setMyNft] = useState(0);
   const [page, setPage] = useState(1);
 
@@ -69,14 +67,13 @@ const Main = ({ account }) => {
       /> */}
       <Intro totalNft={totalNft} mintedNft={mintedNft} myNft={myNft} />
       <div
-        className=""
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/palace_1920.jpg)`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          width: "1920px",
-        }}
+        className="bg-gradient-to-br from-transparent to-gold"
+        // style={{
+        //   backgroundImage: `url(${process.env.PUBLIC_URL}/palace_1920.jpg)`,
+        //   backgroundPosition: "center",
+        //   backgroundSize: "cover",
+        //   backgroundRepeat: "round",
+        // }}
       >
         <Nfts page={page} mintedNft={mintedNft} />
       </div>

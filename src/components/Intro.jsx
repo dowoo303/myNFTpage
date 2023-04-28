@@ -14,13 +14,13 @@ const Intro = ({ totalNft, mintedNft, myNft }) => {
         </div>
         <div className="relative">
           <img
-            className="flex w-40 h-40 rounded-full animate-bounce hover:animate-none"
+            className="absolute flex w-40 h-40 rounded-full"
             src={imgSrc}
             alt="NFT"
           />
-          {/* <div className="w-40 h-40 rounded-full bg-white text-gray-950 flex justify-center items-center">
+          <div className="w-40 h-40 rounded-full bg-white text-gray-950 flex justify-center items-center">
             Loading...
-          </div> */}
+          </div>
         </div>
         <div className="mt-4 text-2xl font-bold flex items-center">
           Joseon Dynasty
@@ -52,10 +52,10 @@ const Intro = ({ totalNft, mintedNft, myNft }) => {
             <div className="font-bold">{myNft}</div>
             <div className="text-gray-300">My NFT</div>
           </div>
-          <div className="flex ml-12 items-center justify-center">
+          <div className="flex ml-auto">
             <Link to={`/mint`}>
-              <button className="p-2 text-xl text-white font-bold hover:bg-white hover:text-black rounded-2xl">
-                Mint 하러가기 !
+              <button className="p-3 text-2xl text-gold bg-gray-500 font-bold hover:bg-white hover:text-black rounded-3xl  animate-bounce hover:animate-none">
+                Go To Mint!
               </button>
             </Link>
           </div>
