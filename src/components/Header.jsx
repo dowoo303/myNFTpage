@@ -109,7 +109,7 @@ const Header = ({ account, setAccount, mybalance, setMybalance }) => {
                 {account.substring(account.length - 4)}
               </div>
               <div className="ml-2" onClick={onClickBalance}>
-                {mybalance ? mybalance + " MATIC" : "Loading..."}
+                {mybalance ? mybalance + " MATIC" : "Mybalance"}
               </div>
             </div>
           </>
